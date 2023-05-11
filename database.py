@@ -10,9 +10,9 @@ load_dotenv(".env")
 DETA_KEY = os.getenv("DETA_KEY")
 
 # # Initialize with a project key
-deta = Deta(DETA_KEY)
+# deta = Deta(DETA_KEY)
 
-# deta = Deta(project_key=st.secrets["db"]["DETA_KEY"])
+deta = Deta(project_key=st.secrets["db"]["DETA_KEY"])
 
 # This is how to create/connect a database
 db = deta.Base("monthly_reports")
